@@ -19,7 +19,7 @@ class graylog2::install {
 	file { "${graylog2::installdir}/graylog2-server-${graylog2::version}":
 		owner		=> "${graylog2::user}",
 		group		=> "${graylog2::user}",
-		recurse	=> "true",
+		recurse	=> true",
 		require	=> [Exec['untar-graylog-package'],Class['graylog2::user']],
    }
 	file { "${graylog2::installdir}/graylog2-server":

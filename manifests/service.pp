@@ -2,7 +2,7 @@ class graylog2::service {
 
   service { 'graylog2-server':
     provider  => base,
-	 enable	  => 'true',
+    enable    => true,
     ensure    => 'running',
     start     => '/etc/init.d/graylog2-server start',
     restart   => '/etc/init.d/graylog2-server restart',
